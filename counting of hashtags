@@ -1,0 +1,3 @@
+n="vi##j#a#y"
+count=n.count('#')
+print(count)
