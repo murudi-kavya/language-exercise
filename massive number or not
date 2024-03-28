@@ -1,0 +1,14 @@
+n=(input("enter the number"))
+x=n
+while x >= 10:
+ sum=0
+while x>0:
+    r=x%10
+    sum=sum+r
+    x=x//10
+    x=sum
+    if sum==1:
+        print(n,"is a massive number")
+    else:
+        print(n,"is not a massive number")
+        
