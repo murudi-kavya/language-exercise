@@ -1,0 +1,9 @@
+def example1():
+    for i in range(4):
+        print("kavya",end=' ')
+def example2():
+    for i in range(4):
+        print("sowmya", end=' ')
+example1()
+example2()
+       
