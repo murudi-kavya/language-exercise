@@ -1,0 +1,8 @@
+import math
+def cube(x):
+    return x**3
+a=120
+abs(a)
+print("absolute value of a is",a)
+print("absolute square root value of a is",math.sqrt(a))
+print("absolute cube value of a is",cube(a))
