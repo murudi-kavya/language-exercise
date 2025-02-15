@@ -1,0 +1,13 @@
+nums = [1, 28, 15, 39, 72, 4, 3]
+even = []
+for num in nums:
+    if num % 2 == 0:
+        even.append(num)  # Append the even number itself, not sum
+if even:  
+    minimum = even[0]
+    for num in even:
+        if num < minimum:
+            minimum = num
+    print(minimum)
+else:
+    print("No even numbers in the list")
