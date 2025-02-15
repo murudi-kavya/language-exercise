@@ -1,0 +1,8 @@
+def balancedsums(arr):
+    n = len(arr)
+    for i in range(n):
+        left = arr[:i]  # Elements before index i
+        right = arr[i+1:]  # Elements after index i
+        if sum(left) == sum(right):
+            return "YES"
+    return "NO"
