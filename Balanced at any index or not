@@ -1,0 +1,9 @@
+def balancedsums(arr):
+    left = 0
+    right = sum(arr)  
+    for num in arr:
+        right -= num  # Subtract current number from right sum
+        if left == right:
+            return "YES"
+        left += num  # Add current number to left sum
+    return "NO"
