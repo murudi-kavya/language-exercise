@@ -1,0 +1,6 @@
+revenue=[]
+for i in range(4):
+  revenue.append(float(input()))
+  print(revenue)
+  half_yearly=[]
+  [list]
