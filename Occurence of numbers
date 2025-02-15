@@ -1,0 +1,8 @@
+nums = [3, 2, 3, 3, 5, 4, 3, 4, 2, 2, 1, 4]
+count = [0] * 5  # List to hold counts for numbers 1, 2, 3, 4, 5
+for num in nums:
+    count[num - 1] += 1
+x = max(count)
+i = count.index(x)
+ans = i + 1
+print("Most frequent number:", ans)
