@@ -1,0 +1,20 @@
+class Account:
+    def __init__(self):
+        self.balance = 0  # Initialize balance
+        self.name = "Account Holder"  # Optionally, you can also add a name for the account holder
+    def deposit(self, amount):
+        self.balance += amount
+    def withdraw(self, amount):
+        if amount <= self.balance:  # Prevent withdrawing more than available
+            self.balance -= amount
+        else:
+            print("Insufficient funds")
+    def get_balance(self):
+        return self.balance
+x = Account()
+y = Account()
+x.deposit(100)
+x.withdraw(30)
+print(f"Account x balance: {x.get_balance()}")  # Should print 70
+y.deposit(200)
+print(f"Account y balance: {y.get_balance()}")  # Should print 200
