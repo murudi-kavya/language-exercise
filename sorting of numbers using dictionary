@@ -1,0 +1,11 @@
+nums = [3, 2, 3, 3, 5, 4, 3, 4, 2, 2, 1, 4]
+nums.sort()
+data = {}
+i = 0
+while i < len(nums):
+    j = i + 1
+    while j < len(nums) and nums[i] == nums[j]:
+        j += 1
+    data[nums[i]] = j - i
+    i = j
+print(data)
