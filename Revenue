@@ -1,6 +1,8 @@
-revenue=[]
+revenue = []
 for i in range(4):
-  revenue.append(float(input()))
-  print(revenue)
-  half_yearly=[]
-  [list]
+    revenue.append(float(input("Enter revenue for month {}: ".format(i+1))))
+print("Revenue:", revenue)
+half_yearly = []
+half_yearly.append(revenue[0] + revenue[1])  # First half-year total (months 1 and 2)
+half_yearly.append(revenue[2] + revenue[3])  # Second half-year total (months 3 and 4)
+print("Half-yearly revenue:", half_yearly)
