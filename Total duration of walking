@@ -1,0 +1,8 @@
+nums = [2, 4, 8, 11, 15, 18]
+total = 0
+for i in range(0, len(nums), 2):
+    a = nums[i]
+    b = nums[i+1]
+    time = b - a + 1
+    total += time
+print(total)
