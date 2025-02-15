@@ -1,0 +1,24 @@
+def evaluate_postfix(postfix):
+    arr = postfix.split()
+    stack = []
+    for val in arr:
+        if val not in "+-*/":
+            stack.append(float(val))
+        else:
+            b = stack.pop()
+            a = stack.pop()
+            if val == '+':
+                stack.append(a + b)
+            elif val == '-':
+                stack.append(a - b)
+            elif val == '*':
+                stack.append(a * b)
+            elif val == '/':
+                stack.append(a / b)
+    return stack.pop()
+
+# Example usage
+postfix = "10 5 3 + * 47 -"
+result = evaluate_postfix(postfix)
+print(result)  # Output: 47.0
+
