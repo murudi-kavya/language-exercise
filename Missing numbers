@@ -1,0 +1,8 @@
+arr = [2, 2]
+brr = [2, 3, 2, 3, 2]
+for num in arr:
+    while num in brr:
+        brr.remove(num)
+x = set(brr)
+result = sorted(list(x))
+print(result)
