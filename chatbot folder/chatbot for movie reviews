@@ -1,0 +1,40 @@
+import openai
+
+# Set up the OpenAI API key
+openai.api_key = 'your-openai-api-key-here'
+
+def get_movie_review(movie_title):
+    """
+    This function uses OpenAI's GPT to generate a movie review based on the movie title.
+    """
+    prompt = f"Write a detailed review of the movie: {movie_title}"
+
+    # API call to OpenAI's GPT-3 (you can use GPT-4 if available)
+    response = openai.Completion.create(
+        engine="text-davinci-003",  # You can use a different engine like 'gpt-4' or others
+        prompt=prompt,
+        max_tokens=300,  # Limit to 300 tokens for a concise review
+        temperature=0.7,  # Creativity of the response (higher is more creative)
+    )
+
+    review = response.choices[0].text.strip()
+    return review
+
+def chat_with_bot():
+    """
+    Function to interact with the chatbot.
+    """
+    print("Welcome to the Movie Review Bot! Ask me for a movie review.")
+    while True:
+        # Ask user for a movie title
+        movie_title = input("\nEnter a movie title (or type 'exit' to quit): ")
+        if movie_title.lower() == 'exit':
+            print("Goodbye!")
+            break
+
+        # Generate and display the movie review
+        review = get_movie_review(movie_title)
+        print(f"\nReview of '{movie_title}':\n{review}")
+
+if _name_ == "_main_":
+    chat_with_bot()
